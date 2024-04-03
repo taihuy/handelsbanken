@@ -4,7 +4,7 @@ public class Watch {
     private int id;
     private String name;
     private double unitPrice;
-    private Discount discount; // Added Discount as a property
+    private Discount discount; 
 
     public Watch(int id, String name, double unitPrice, Discount d) {
         this.id = id;
@@ -49,13 +49,11 @@ public class Watch {
         return this.getDiscount() == null;
     }
 
-    // generate a struct for discount with quantity and price
     public record Discount(int quantity, double price) {
     }
 
-    public void setDiscount(Discount discount2) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setDiscount'");
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
     };
 
 }

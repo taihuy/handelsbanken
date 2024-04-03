@@ -39,7 +39,7 @@ public class WatchRepository {
         if (watchToUpdate != null) {
             watchToUpdate.setName(updatedWatch.getName());
             watchToUpdate.setUnitPrice(updatedWatch.getUnitPrice());
-            watchToUpdate.setDiscount(updatedWatch.getDiscount());
+            watchToUpdate.setDiscount(updatedWatch.getDiscount().quantity(), updatedWatch.getDiscount().price());
         }
     }
 
